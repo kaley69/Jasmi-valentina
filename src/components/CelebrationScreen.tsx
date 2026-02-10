@@ -51,7 +51,7 @@ const CelebrationScreen = () => {
           <div className="animate-bounce-in">
             <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 shadow-valentine">
               <p className="font-display text-3xl md:text-4xl text-valentine-rose animate-pulse-heart">
-                See you on our Valentine's date 😘
+                Love You Forever
               </p>
               <p className="font-body text-lg text-muted-foreground mt-3">
                 I can't wait! 🌹✨
