@@ -3,11 +3,11 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const photos = [
   { id: 1, emoji: "💑", caption: "Our first date" },
-  { id: 2, emoji: "🥰", caption: "That special moment" },
+  { id: 2, emoji: "💍", caption: "That special moment to Marry You" },
   { id: 3, emoji: "💕", caption: "Adventures together" },
-  { id: 4, emoji: "🌹", caption: "You & Me" },
+  { id: 4, emoji: "🌹", caption: "You & Me Forever" },
   { id: 5, emoji: "💖", caption: "Forever & always" },
-  { id: 6, emoji: "😘", caption: "My favorite person" },
+  { id: 6, emoji: "🧑‍🤝‍👩", caption: "Holding Hands" },
 ];
 
 const PhotoGallery = () => {
@@ -16,7 +16,7 @@ const PhotoGallery = () => {
   return (
     <div className="w-full max-w-2xl mx-auto mt-10 animate-bounce-in" style={{ animationDelay: "5s", animationFillMode: "both" }}>
       <h2 className="font-display text-3xl md:text-4xl text-gradient-love text-center mb-6">
-        Our Moments Together 💞
+        Things I am Waiting For💞
       </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
