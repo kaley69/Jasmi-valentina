@@ -41,9 +41,6 @@ const PhotoGallery = () => {
         ))}
       </div>
 
-      <p className="text-center font-body text-sm text-muted-foreground mt-4">
-        Replace these with your real photos! 📸
-      </p>
 
       <Dialog open={selected !== null} onOpenChange={() => setSelected(null)}>
         <DialogContent className="bg-card/95 backdrop-blur-md border-valentine-pink/30 shadow-valentine max-w-sm text-center">
@@ -54,9 +51,6 @@ const PhotoGallery = () => {
               </span>
               <p className="font-display text-2xl text-gradient-love">
                 {photos.find((p) => p.id === selected)?.caption}
-              </p>
-              <p className="font-body text-muted-foreground mt-2 text-sm">
-                Add your real photo here 💕
               </p>
             </div>
           )}
