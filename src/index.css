@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 80% 95%;
+    --foreground: 340 60% 20%;
+
+    --card: 340 60% 97%;
+    --card-foreground: 340 60% 20%;
+
+    --popover: 340 60% 97%;
+    --popover-foreground: 340 60% 20%;
+
+    --primary: 346 77% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 60% 90%;
+    --secondary-foreground: 340 60% 25%;
+
+    --muted: 340 40% 92%;
+    --muted-foreground: 340 20% 45%;
+
+    --accent: 20 80% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 40% 88%;
+    --input: 340 40% 88%;
+    --ring: 346 77% 55%;
+
+    --radius: 1rem;
+
+    --valentine-rose: 346 77% 55%;
+    --valentine-pink: 340 80% 78%;
+    --valentine-blush: 340 60% 90%;
+    --valentine-deep: 340 70% 35%;
+    --valentine-warm: 20 80% 65%;
+    --valentine-gold: 40 90% 60%;
+
+    --font-display: 'Dancing Script', cursive;
+    --font-body: 'Quicksand', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gradient-love {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--valentine-rose)), hsl(var(--valentine-pink)), hsl(var(--valentine-warm)));
+  }
+
+  .bg-gradient-valentine {
+    background: linear-gradient(135deg, hsl(var(--valentine-blush)), hsl(var(--background)), hsl(var(--valentine-blush)));
+  }
+
+  .shadow-valentine {
+    box-shadow: 0 8px 32px -8px hsl(var(--valentine-rose) / 0.3),
+                0 4px 16px -4px hsl(var(--valentine-pink) / 0.2);
+  }
+
+  .glow-heart {
+    box-shadow: 0 0 20px hsl(var(--valentine-rose) / 0.4),
+                0 0 60px hsl(var(--valentine-pink) / 0.2);
+  }
+}
+
+/* Floating hearts animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) rotate(20deg) scale(1);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.2); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(20px); }
+}
+
+.animate-float-up {
+  animation: float-up linear forwards;
+}
+
+.animate-pulse-heart {
+  animation: pulse-heart 1.2s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-confetti {
+  animation: confetti-fall linear forwards;
+}
+
+.animate-sway {
+  animation: sway 3s ease-in-out infinite;
+}
