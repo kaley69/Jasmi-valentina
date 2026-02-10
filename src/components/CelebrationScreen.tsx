@@ -54,7 +54,7 @@ const CelebrationScreen = () => {
                 Love You Forever
               </p>
               <p className="font-body text-lg text-muted-foreground mt-3">
-                I can't wait! 🌹✨
+                More Than Anything 🌹✨
               </p>
             </div>
           </div>
